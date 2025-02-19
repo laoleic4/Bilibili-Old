@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bilibili 旧播放页
 // @namespace    MotooriKashin
-// @version      10.8.5-1272ee50230293555dec1d2e23fc5c74215b4c86
+// @version      10.8.7-a31dc13f64b0b5a3afd202adb18cdd8cdd0dcc36
 // @description  恢复Bilibili旧版页面，为了那些念旧的人。
 // @author       MotooriKashin, wly5556
 // @homepage     https://github.com/MotooriKashin/Bilibili-Old
@@ -7587,7 +7587,7 @@ const MODULES = `
     static APP_PGC_PLAYURL = _URLS.P_AUTO + _URLS.D_API + "/pgc/player/api/playurl";
     static ACCOUNT_GETCARDBYMID = _URLS.P_AUTO + _URLS.D_ACCOUNT + "/api/member/getCardByMid";
     static LOGIN_APP_THIRD = _URLS.P_AUTO + _URLS.D_PASSPORT + "/login/app/third";
-    static PLAYER = _URLS.P_AUTO + _URLS.D_API + "/x/player/v2";
+    static PLAYER = _URLS.P_AUTO + _URLS.D_API + "/x/player/wbi/v2";
     static PLAYURL_PROJ = _URLS.P_AUTO + _URLS.D_APP + "/v2/playurlproj";
     static PGC_PLAYURL_PROJ = _URLS.P_AUTO + _URLS.D_API + "/pgc/player/api/playurlproj";
     static PGC_PLAYURL_TV = _URLS.P_AUTO + _URLS.D_API + "/pgc/player/api/playurltv";
@@ -8661,7 +8661,7 @@ const MODULES = `
       }
     }
   };
-  customElements.get(\`toast-\${"1272ee5"}\`) || customElements.define(\`toast-\${"1272ee5"}\`, Toast, { extends: "div" });
+  customElements.get(\`toast-\${"a31dc13"}\`) || customElements.define(\`toast-\${"a31dc13"}\`, Toast, { extends: "div" });
   var ToastContainer = class extends HTMLElement {
     /** 实际根节点 */
     container;
@@ -8788,7 +8788,7 @@ const MODULES = `
       }
     }
   };
-  customElements.get(\`toast-container-\${"1272ee5"}\`) || customElements.define(\`toast-container-\${"1272ee5"}\`, ToastContainer);
+  customElements.get(\`toast-container-\${"a31dc13"}\`) || customElements.define(\`toast-container-\${"a31dc13"}\`, ToastContainer);
   var toast = new ToastContainer();
 
   // src/core/user.ts
@@ -8861,7 +8861,7 @@ const MODULES = `
       }
     }
   };
-  customElements.get("biliold-entry-1272ee5") || customElements.define("bilibili-entry-1272ee5", BilioldEntry);
+  customElements.get("biliold-entry-a31dc13") || customElements.define("bilibili-entry-a31dc13", BilioldEntry);
 
   // src/core/userstatus.ts
   var userStatus = {
@@ -9144,7 +9144,7 @@ const MODULES = `
       this._button.textContent = v;
     }
   };
-  customElements.get(\`button-\${"1272ee5"}\`) || customElements.define(\`button-\${"1272ee5"}\`, PushButton);
+  customElements.get(\`button-\${"a31dc13"}\`) || customElements.define(\`button-\${"a31dc13"}\`, PushButton);
 
   // src/core/ui/utils/popupbox.ts
   init_tampermonkey();
@@ -9246,7 +9246,7 @@ const MODULES = `
       }
     }
   };
-  customElements.get(\`popupbox-\${"1272ee5"}\`) || customElements.define(\`popupbox-\${"1272ee5"}\`, PopupBox);
+  customElements.get(\`popupbox-\${"a31dc13"}\`) || customElements.define(\`popupbox-\${"a31dc13"}\`, PopupBox);
 
   // src/core/ui/alert.ts
   function alert(msg, title, buttons, fork = false) {
@@ -13231,7 +13231,7 @@ const MODULES = `
       this._container.replaceChildren(this._noData);
     }
   };
-  customElements.get(\`download-\${"1272ee5"}\`) || customElements.define(\`download-\${"1272ee5"}\`, BilioldDownload);
+  customElements.get(\`download-\${"a31dc13"}\`) || customElements.define(\`download-\${"a31dc13"}\`, BilioldDownload);
 
   // src/core/ui/preview-image.ts
   init_tampermonkey();
@@ -13459,7 +13459,7 @@ const MODULES = `
       document.body.style.overflow = "hidden";
     }
   };
-  customElements.get(\`preview-image-\${"1272ee5"}\`) || customElements.define(\`preview-image-\${"1272ee5"}\`, PreviewImage);
+  customElements.get(\`preview-image-\${"a31dc13"}\`) || customElements.define(\`preview-image-\${"a31dc13"}\`, PreviewImage);
 
   // src/core/videolimit.ts
   init_tampermonkey();
@@ -25089,9 +25089,9 @@ const MODULES = `
     encode(path, hash = this.hash) {
       switch (this.host) {
         case "jsdelivr":
-          return \`\${this.protocol}://fastly.jsdelivr.net/gh/MotooriKashin/Bilibili-Old\${hash ? \`@\${hash}\` : ""}\${path}\`;
+          return \`\${this.protocol}://fastly.jsdelivr.net/gh/followmypeach/Bilibili-Old\${hash ? \`@\${hash}\` : ""}\${path}\`;
         default:
-          return \`\${this.protocol}://github.com/MotooriKashin/Bilibili-Old/raw/\${hash || "master"}\${path}\`;
+          return \`\${this.protocol}://github.com/followmypeach/Bilibili-Old/raw/\${hash || "master"}\${path}\`;
       }
     }
     /** 更新默认值 */
@@ -29448,7 +29448,7 @@ const MODULES = `
           debug.error("获取点赞情况失败", e);
         });
       }
-      addCss(".ulike {cursor: pointer;}.ulike svg{vertical-align: middle;margin-right: 10px;transform: translateY(-1px);}", \`ulike\${"1272ee5"}\`);
+      addCss(".ulike {cursor: pointer;}.ulike svg{vertical-align: middle;margin-right: 10px;transform: translateY(-1px);}", \`ulike\${"a31dc13"}\`);
     }
     /** 更新点赞数 */
     get likes() {
@@ -29466,7 +29466,7 @@ const MODULES = `
       this.innerHTML = (this.liked ? like_default : dislike_default) + "点赞 " + unitFormat(this.number);
     }
   };
-  customElements.get(\`like-\${"1272ee5"}\`) || customElements.define(\`like-\${"1272ee5"}\`, Like, { extends: "span" });
+  customElements.get(\`like-\${"a31dc13"}\`) || customElements.define(\`like-\${"a31dc13"}\`, Like, { extends: "span" });
 
   // src/css/uplist.css
   var uplist_default = ".up-info-m .up-card-box {\\r\\n    white-space: nowrap;\\r\\n    overflow: auto;\\r\\n}\\r\\n\\r\\n.up-info-m .up-card {\\r\\n    display: inline-block;\\r\\n    margin-top: 10px;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar img {\\r\\n    cursor: pointer;\\r\\n    width: 40px;\\r\\n    height: 40px;\\r\\n    border-radius: 50%;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar {\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar .info-tag {\\r\\n    position: absolute;\\r\\n    background: #fff;\\r\\n    border: 1px solid #fb7299;\\r\\n    border-radius: 2px;\\r\\n    display: inline-block;\\r\\n    font-size: 12px;\\r\\n    color: #fb7299;\\r\\n    padding: 0 3px;\\r\\n    top: -10px;\\r\\n    right: -10px;\\r\\n    white-space: nowrap;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar {\\r\\n    width: 60px;\\r\\n    height: 30px;\\r\\n    display: -ms-flexbox;\\r\\n    display: flex;\\r\\n    -ms-flex-pack: center;\\r\\n    justify-content: center;\\r\\n    -ms-flex-align: start;\\r\\n    align-items: flex-start;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar .name-text {\\r\\n    font-family: PingFangSC-Regular, sans-serif;\\r\\n    line-height: 30px;\\r\\n    color: #222;\\r\\n    word-break: break-all;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n    display: -webkit-box;\\r\\n    -webkit-line-clamp: 2;\\r\\n    -webkit-box-orient: vertical;\\r\\n    white-space: nowrap;\\r\\n}\\r\\n\\r\\n.up-info-m .avatar .name-text.is-vip,\\r\\n.up-info-m .avatar .name-text:hover {\\r\\n    color: #fb7299;\\r\\n}\\r\\n\\r\\n.up-info-m .title {\\r\\n    display: block;\\r\\n    font-size: 14px;\\r\\n    margin-right: 80px;\\r\\n    color: #525659;\\r\\n    overflow: hidden;\\r\\n    height: 24px;\\r\\n    font-weight: 400;\\r\\n    padding: 8px 0;\\r\\n}";
@@ -38904,7 +38904,7 @@ const MODULES = `
       }
     }
   };
-  customElements.get(\`desc-\${"1272ee5"}\`) || customElements.define(\`desc-\${"1272ee5"}\`, Desc);
+  customElements.get(\`desc-\${"a31dc13"}\`) || customElements.define(\`desc-\${"a31dc13"}\`, Desc);
 
   // src/core/ui/interface.ts
   init_tampermonkey();
@@ -38982,7 +38982,7 @@ const MODULES = `
       this._value.appendChild(value);
     }
   };
-  customElements.get(\`item-\${"1272ee5"}\`) || customElements.define(\`item-\${"1272ee5"}\`, SettingItem, { extends: "div" });
+  customElements.get(\`item-\${"a31dc13"}\`) || customElements.define(\`item-\${"a31dc13"}\`, SettingItem, { extends: "div" });
 
   // src/core/ui/menu.ts
   init_tampermonkey();
@@ -39016,7 +39016,7 @@ const MODULES = `
       this._card.append(...item);
     }
   };
-  customElements.get(\`item-container-\${"1272ee5"}\`) || customElements.define(\`item-container-\${"1272ee5"}\`, ItemContainer, { extends: "div" });
+  customElements.get(\`item-container-\${"a31dc13"}\`) || customElements.define(\`item-container-\${"a31dc13"}\`, ItemContainer, { extends: "div" });
 
   // src/core/ui/menu.ts
   var Menuitem = class extends HTMLDivElement {
@@ -39076,7 +39076,7 @@ const MODULES = `
       return this.container;
     }
   };
-  customElements.get(\`menuitem-\${"1272ee5"}\`) || customElements.define(\`menuitem-\${"1272ee5"}\`, Menuitem, { extends: "div" });
+  customElements.get(\`menuitem-\${"a31dc13"}\`) || customElements.define(\`menuitem-\${"a31dc13"}\`, Menuitem, { extends: "div" });
 
   // src/core/ui/utils/checkbox.ts
   init_tampermonkey();
@@ -39165,7 +39165,7 @@ const MODULES = `
       Object.entries(value).forEach((d) => this[d[0]] = d[1]);
     }
   };
-  customElements.get(\`checkbox-\${"1272ee5"}\`) || customElements.define(\`checkbox-\${"1272ee5"}\`, CheckBox);
+  customElements.get(\`checkbox-\${"a31dc13"}\`) || customElements.define(\`checkbox-\${"a31dc13"}\`, CheckBox);
   var CheckBoxs = class extends HTMLDivElement {
     \$value = [];
     checkboxs = {};
@@ -39216,7 +39216,7 @@ const MODULES = `
       });
     }
   };
-  customElements.get(\`checkboxs-\${"1272ee5"}\`) || customElements.define(\`checkboxs-\${"1272ee5"}\`, CheckBoxs, { extends: "div" });
+  customElements.get(\`checkboxs-\${"a31dc13"}\`) || customElements.define(\`checkboxs-\${"a31dc13"}\`, CheckBoxs, { extends: "div" });
 
   // src/core/ui/utils/input.ts
   init_tampermonkey();
@@ -39292,7 +39292,7 @@ const MODULES = `
       Object.entries(value).forEach((d) => this[d[0]] = d[1]);
     }
   };
-  customElements.get(\`input-\${"1272ee5"}\`) || customElements.define(\`input-\${"1272ee5"}\`, InputArea);
+  customElements.get(\`input-\${"a31dc13"}\`) || customElements.define(\`input-\${"a31dc13"}\`, InputArea);
 
   // src/core/ui/utils/select.ts
   init_tampermonkey();
@@ -39359,7 +39359,7 @@ const MODULES = `
       Object.entries(value).forEach((d) => this[d[0]] = d[1]);
     }
   };
-  customElements.get(\`select-\${"1272ee5"}\`) || customElements.define(\`select-\${"1272ee5"}\`, SelectMenu);
+  customElements.get(\`select-\${"a31dc13"}\`) || customElements.define(\`select-\${"a31dc13"}\`, SelectMenu);
 
   // src/core/ui/utils/slider.ts
   init_tampermonkey();
@@ -39523,7 +39523,7 @@ const MODULES = `
       Object.entries(value).forEach((d) => this[d[0]] = d[1]);
     }
   };
-  customElements.get(\`slider-\${"1272ee5"}\`) || customElements.define(\`slider-\${"1272ee5"}\`, SliderBlock);
+  customElements.get(\`slider-\${"a31dc13"}\`) || customElements.define(\`slider-\${"a31dc13"}\`, SliderBlock);
 
   // src/core/ui/utils/switch.ts
   init_tampermonkey();
@@ -39572,7 +39572,7 @@ const MODULES = `
       return this;
     }
   };
-  customElements.get(\`switch-\${"1272ee5"}\`) || customElements.define(\`switch-\${"1272ee5"}\`, SwitchButton);
+  customElements.get(\`switch-\${"a31dc13"}\`) || customElements.define(\`switch-\${"a31dc13"}\`, SwitchButton);
 
   // src/core/ui.ts
   var Menus = {
