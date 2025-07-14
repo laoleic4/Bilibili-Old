@@ -13842,24 +13842,44 @@ const MODULES = `
   }
 
   // src/core/videolimit.ts
-  var UPOS = {
-    "ks3（金山）": "upos-sz-mirrorks3.bilivideo.com",
-    "ks3b（金山）": "upos-sz-mirrorks3b.bilivideo.com",
-    "ks3c（金山）": "upos-sz-mirrorks3c.bilivideo.com",
-    "ks32（金山）": "upos-sz-mirrorks32.bilivideo.com",
-    "kodo（七牛）": "upos-sz-mirrorkodo.bilivideo.com",
-    "kodob（七牛）": "upos-sz-mirrorkodob.bilivideo.com",
+    var UPOS = {
     "cos（腾讯）": "upos-sz-mirrorcos.bilivideo.com",
     "cosb（腾讯）": "upos-sz-mirrorcosb.bilivideo.com",
     "coso1（腾讯）": "upos-sz-mirrorcoso1.bilivideo.com",
-    "coso2（腾讯）": "upos-sz-mirrorcoso2.bilivideo.com",
-    "bos（腾讯）": "upos-sz-mirrorbos.bilivideo.com",
+    "cosdisp（腾讯）": "upos-sz-mirrorcosdisp.bilivideo.com",
+    "bd（百度）": "upos-sz-mirrorbd.bilivideo.com",
+    "bda2（百度）": "upos-sz-upcdnbda2.bilivideo.com",
     "hw（华为）": "upos-sz-mirrorhw.bilivideo.com",
     "hwb（华为）": "upos-sz-mirrorhwb.bilivideo.com",
-    "uphw（华为）": "upos-sz-upcdnhw.bilivideo.com",
-    "js（华为）": "upos-tf-all-js.bilivideo.com",
-    "hk（香港）": "cn-hk-eq-bcache-01.bilivideo.com",
-    "akamai（海外）": "upos-hz-mirrorakam.akamaized.net"
+    "hwdisp（华为）": "upos-sz-mirrorhwdisp.bilivideo.com",
+    "hwo1（华为）": "upos-sz-mirrorhwo1.bilivideo.com",
+    "08c（华为）": "upos-sz-mirror08c.bilivideo.com",
+    "08ct（华为）": "upos-sz-mirror08ct.bilivideo.com",
+    "08h（华为）": "upos-sz-mirror08h.bilivideo.com",
+    "alib（阿里云）": "upos-sz-mirroralib.bilivideo.com",
+    "ali02（阿里云）": "upos-sz-mirrorali02.bilivideo.com",
+    "estg（阿里云）": "upos-sz-estgoss.bilivideo.com",
+    "ali（阿里云）": "upos-sz-mirrorali.bilivideo.com",
+    "aliov（阿里云国际）": "upos-sz-mirroraliov.bilivideo.com",
+    "cosov（腾讯国际）": "upos-sz-mirrorcosov.bilivideo.com",
+    "akamai（海外）": "upos-hz-mirrorakam.akamaized.net",
+    "陕西西安电信": "cn-sxxa3-dx-bcache-04.bilivideo.com",
+    "浙江金华电信": "cn-zjjh-ct-04-06.bilivideo.com",
+    "广东佛山电信": "cn-gdfs-ct-01-13.bilivideo.com",
+    "湖南永州电信": "cn-hnld-ct-01-44.bilivideo.com",
+    "广东广州联通": "cn-gdgz-gd-bcache-15.bilivideo.com",
+    "浙江杭州联通": "cn-zjhz-cu-01-03.bilivideo.com",
+    "内蒙古呼和浩特联通": "cn-nmghhht-cu-01-10.bilivideo.com",
+    "江西南昌移动": "cn-jxnc-cmcc-bcache-09.bilivideo.com",
+    "陕西西安移动": "cn-sxxa-cmcc-bcache-05.bilivideo.com",
+    "福建泉州移动": "cn-fjqz-cm-01-04.bilivideo.com",
+    "浙江杭州移动": "cn-zjhz-cm-01-12.bilivideo.com",
+    "广东东莞三网": "cn-gddg-ccc-01-01.bilivideo.com",
+    "广东东莞广电": "cn-gdgz-gd-bcache-06.bilivideo.com",
+    "湖北武汉教育网": "cn-hbwh-fx-01-06.bilivideo.com",
+    "北京教育网": "cn-bj-fx-01-01.bilivideo.com",
+    "浙江杭州华数": "cn-zjhz3-wasu-bcache-20.bilivideo.com",
+    "广东深圳天威视讯": "cn-gdsz-twsx-bcache-01.bilivideo.com"
   };
   var AREA = /* @__PURE__ */ ((AREA2) => {
     AREA2[AREA2["tw"] = 0] = "tw";
